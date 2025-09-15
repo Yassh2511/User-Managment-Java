@@ -35,6 +35,7 @@ public class RegisterServlet extends HttpServlet {
         }catch(Exception e) {
             e.printStackTrace();
         }
+        // This will generate the dbms connection
         //generate the connection
         try(Connection con = DriverManager.getConnection("jdbc:mysql:///usermgmt","root","root");
                 PreparedStatement ps = con.prepareStatement(query);){
